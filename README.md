@@ -1,6 +1,6 @@
-# builderr trading agent — starter template
+# Robert CA builderr trading agent
 
-Submission template for the **builderr Trading Agent Leaderboard**.
+Public submission repo for the **builderr Trading Agent Leaderboard**.
 
 Fork this repo, implement `decide()` in `agent.py`, then send us the repo — **public or private, your call** (private repos use a read-only deploy key; see [«Submission»](#submission)). Submit at https://builderr.ai/trading-v0 (or just email the link to `submit@builderr.ai`). Full rules &amp; FAQ: https://builderr.ai/guidelines
 
@@ -22,15 +22,17 @@ Fork this repo, implement `decide()` in `agent.py`, then send us the repo — **
 
 > **Secrets:** never commit API keys. You do not need an LLM, brokerage login, or real-money account to enter. If you use an LLM, use endpoint mode or a capped throwaway key.
 
-## Submitted agent: Calmar Rotation Hybrid
+## Submitted agent: Robert CA Drawdown-First Momentum
 
-`agent.py` is a no-network, no-LLM strategy built for the live Calmar ranking (Round 1: June 2 – July 2, 2026):
+`agent.py` is a pure-Python, no-network, no-LLM strategy built for the live Calmar ranking:
 
-- **Risk regime:** risk-on only when SPY and QQQ are above their 50-day SMAs and QQQ 20-day volatility is below 35%.
-- **Risk-off book:** XLP / XLU / XLV / XLE with cash left over; no leverage.
-- **Risk-on book:** ranks SPY, QQQ, sector ETFs, SMH, and mega-cap tech by 60-day momentum, 20-day momentum, 50-day trend gap, and volatility.
+- **Risk regime:** three states: risk-on, partial recovery, and stress defense.
+- **Risk-on book:** ranks broad ETFs, sectors, banks, and mega-cap tech by 120/60/20-day momentum, 50-day trend gap, and realized volatility.
+- **Stress defense:** moves mostly to cash with small XLP / XLU / XLV-style defensive exposure when QQQ volatility, 5/10-day losses, or recent drawdown spike.
+- **Recovery book:** after a crash, re-enters only partially and only when SPY/QQQ regain short-term trend.
 - **Tactical overlay:** adds small QLD / SSO exposure only in calm QQQ uptrends; never uses TQQQ or SOXL by default.
-- **Caps:** per-ticker targets stay below 24%, drift rebalance starts above 27%, and beta-adjusted gross is scaled below 1.35x.
+- **Caps:** per-ticker targets stay below 23.5%, drift rebalance starts above 26.5%, and beta-adjusted gross is scaled below 1.35x.
+- **Runtime/secrets:** no third-party packages, no external data calls, no API keys, and no `print()` inside `decide()`.
 
 Run `python strategy_selftest.py` for strategy-specific cap/regime checks.
 
