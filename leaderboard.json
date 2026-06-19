@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-18T23:27:41Z",
+  "generated_at_utc": "2026-06-19T22:42:36Z",
   "as_of_market_date": "2026-06-18",
   "window_trading_days": 60,
   "note": "Reference bots, trailing 60 trading days on live market data, refreshed each market day. Ranked by Calmar.",
@@ -16,10 +16,10 @@
     {
       "name": "vol-target",
       "label": "reference",
-      "ret": 0.0731,
+      "ret": 0.0733,
       "mdd": 0.0186,
-      "sharpe": 4.5416,
-      "calmar": 18.5171,
+      "sharpe": 4.5502,
+      "calmar": 18.5832,
       "trades": 5
     },
     {
