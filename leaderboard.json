@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-02T22:54:53Z",
+  "generated_at_utc": "2026-07-03T22:52:27Z",
   "as_of_market_date": "2026-07-02",
   "window_trading_days": 60,
   "note": "Reference bots, trailing 60 trading days on live market data, refreshed each market day. Ranked by Calmar.",
