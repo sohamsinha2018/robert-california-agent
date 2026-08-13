@@ -1,44 +1,44 @@
 {
-  "generated_at_utc": "2026-08-12T22:27:35Z",
-  "as_of_market_date": "2026-08-12",
+  "generated_at_utc": "2026-08-13T22:28:56Z",
+  "as_of_market_date": "2026-08-13",
   "window_trading_days": 60,
   "note": "Reference bots, trailing 60 trading days on live market data, refreshed each market day. Ranked by Calmar.",
   "bots": [
     {
       "name": "vol-target",
       "label": "reference",
-      "ret": 0.062,
-      "mdd": 0.0415,
-      "sharpe": 2.0883,
-      "calmar": 6.9155,
+      "ret": 0.0532,
+      "mdd": 0.0419,
+      "sharpe": 1.8154,
+      "calmar": 5.8064,
       "trades": 16
     },
     {
       "name": "dual-momentum-rotation",
       "label": "house \u00b7 all-weather",
-      "ret": 0.0767,
-      "mdd": 0.2223,
-      "sharpe": 0.7852,
-      "calmar": 1.6367,
-      "trades": 8
+      "ret": 0.0678,
+      "mdd": 0.0645,
+      "sharpe": 1.5422,
+      "calmar": 4.9207,
+      "trades": 5
     },
     {
       "name": "ai-momentum-basket",
       "label": "house \u00b7 aggressive",
-      "ret": 0.0371,
-      "mdd": 0.1022,
-      "sharpe": 0.7443,
-      "calmar": 1.6188,
+      "ret": 0.0449,
+      "mdd": 0.1045,
+      "sharpe": 0.8601,
+      "calmar": 1.9373,
       "trades": 9
     },
     {
       "name": "sector-rotation",
       "label": "reference",
-      "ret": 0.0362,
-      "mdd": 0.5138,
-      "sharpe": 1.0468,
-      "calmar": 0.313,
-      "trades": 7
+      "ret": -0.0161,
+      "mdd": 0.0839,
+      "sharpe": -0.2496,
+      "calmar": -0.7857,
+      "trades": 16
     }
   ]
 }
